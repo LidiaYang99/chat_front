@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chat {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1004px;
+    height: 500px;
+    border: 2px solid lightseagreen;
+    ;
+}
+
+.num {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    background-color: lightseagreen;
+    color: antiquewhite;
+    text-align: center;
+    right: 0;
+    top: 0;
+}
+
+.mensajes {
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+    /* align-self: flex-end; */
+}
+
+.mensajes .propio {
+    color: purple;
+    align-self: flex-end;
+}
+
+.mensajes li {
+    margin: 15px 0;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    padding: 10px;
+    background-color: lightseagreen;
+}

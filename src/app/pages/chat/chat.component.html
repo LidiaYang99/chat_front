@@ -1,0 +1,39 @@
+<div class="chat">
+
+    <div class="mensajes" #divMensajes>
+
+        <!-- 通过ngClass + 判断来给自己的信息加上样式 -->
+        <ul>
+            <li *ngFor="let mensaje of mensajes" [ngClass]="{ 
+                propio:(mensaje.socket_id===socket.id)
+            }">
+                <strong>{{mensaje.usuario}}: </strong> {{mensaje.mensaje}}
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div class="num">
+        <p>Numero de cliente:{{clienteNum}}</p>
+        <div>
+            <i>{{ audioOn ? '🔊' : '🔇'}}</i><input type="checkbox" [(ngModel)]="audioOn">
+        </div>
+    </div>
+
+    
+    <div class="formulario">
+        <div>
+            <label>Usuario</label>
+            <input type="text" [(ngModel)]="data.usuario">
+        </div>
+
+        <div>
+            <label>Mensaje</label>
+            <input type="text" [(ngModel)]="data.mensaje">
+        </div>
+
+        <button (click)="onClick()">Enviar</button>
+    </div>
+
+</div>
